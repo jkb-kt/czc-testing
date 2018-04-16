@@ -39,6 +39,28 @@ Product ordering
     Check cheapest ordering
     Order from the most expensive
     check expensive ordering
+    
+
+
+
+Login success
+    [Documentation]    TC 10
+    
+    Login with username and password
+    
+    
+Login failed
+    [Documentation]    TC 11
+    
+    Login with wrong username and password
+    
+
+
+Login and successful sign out
+    [Documentation]    TC 15
+    
+    Login with username and password
+    Successful signout
 
 
 

@@ -1,4 +1,4 @@
-*** Settings ***
+﻿*** Settings ***
 Library  Selenium2Library
 
 *** Keywords ***
@@ -84,5 +84,32 @@ Check elements on page
     [Arguments]  @{element_set}
     :FOR  ${elem}   IN  @{element_set}
     \   wait until page contains element  ${elem}
+
+Login with username and password
+    
+    [Documentation]    Login success
+    click element    ${login}
+    wait until page contains element    ${username_input}
+    input text    ${username_input}    ${username}
+    input text    ${password_input}    ${password}
+    click element    ${submit}
+    wait until page contains element    ${logged}
+    
+Login with wrong username and password
+    
+    [Documentation]    Login fail
+    click element    ${login}
+    wait until page contains element    ${username_input}
+    input text    ${username_input}    ${username_wrong}
+    input text    ${password_input}    ${password_wrong}
+    wait until page contains element    ${wrong_login}
+
+
+Successful signout
+    
+    [Documentation]    Sign out
+   
+    mouse over    ${logged}
+    click element    ${sign_out}
 
 
