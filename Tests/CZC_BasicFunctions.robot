@@ -62,7 +62,13 @@ Login and successful sign out
     Login with username and password
     Successful signout
 
-
+Find product and add comment to discussion
+    [Documentation]    TC 13
+    Login with username and password
+    Search product  Apple iPhone 6s
+    Click element    ${iphone6}
+    Add comment to discussion
+     
 
 
 

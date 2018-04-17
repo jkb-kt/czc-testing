@@ -1,4 +1,4 @@
-﻿*** Variables ***
+*** Variables ***
 ${search_input}  //input[@id="fulltext"]
 ${search_button}  //input[@id="fulltextSubmit"]
 @{mainpage_labels}  Pobočky  Akce  Služby  Články  přihlášení
@@ -27,3 +27,10 @@ ${username_wrong}    spatnejmeno
 ${password_wrong}    spatneheslo
 ${wrong_login}    xpath=//*[contains(@class,"input-error")]
 ${sign_out}    xpath=//*[contains(@class,"usr-logout")]
+${iphone6}    xpath=//*[@id="tiles"]/div[1]/div[1]/div[2]/div[1]/h5/a
+${enter_discus}    xpath=//*[@id="latestActiveDiscussionThreadsContainer"]/div/div/div[2]/a[3]
+${discus_name}    Tema01
+${discus_content}    Iphone6s
+${discus_name_element}    xpath=//*[@id="frm-title"]
+${discus_content_element}    xpath=//*[@id="frm-content"] 
+${discus_confirm}    xpath=//*[@id="popup-new-discussion-thread"]/div/form/div[5]/button[2]

@@ -112,4 +112,12 @@ Successful signout
     mouse over    ${logged}
     click element    ${sign_out}
 
-
+Add comment to discussion
+    
+    [Documentation]    Add comment
+    
+    Click element    ${enter_discus}
+    wait until page contains element    ${discus_name_element}
+    Input text    ${discus_name_element}    ${discus_name}
+    Input text    ${discus_content_element}    ${discus_content}
+    Click element    ${discus_confirm}
