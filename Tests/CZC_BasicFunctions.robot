@@ -69,7 +69,10 @@ Find product and add comment to discussion
     Click element    ${iphone6}
     Add comment to discussion
      
-
+Add product question
+    [Documentation]    TC 16
+    Login with username and password
+    Add contact form
 
 
 

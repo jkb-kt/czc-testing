@@ -34,3 +34,8 @@ ${discus_content}    Iphone6s
 ${discus_name_element}    xpath=//*[@id="frm-title"]
 ${discus_content_element}    xpath=//*[@id="frm-content"] 
 ${discus_confirm}    xpath=//*[@id="popup-new-discussion-thread"]/div/form/div[5]/button[2]
+${contact_element}    xpath=//*[@id="footer-links"]/div[1]/div[2]/div[1]/ul/li[1]/a
+${contact_product_element}    xpath=//*[@id="content"]/div[2]/div[2]/ul/li[3]/a
+${message_element}    xpath=//*[@id="frm-message"]
+${message}    Dobry den, budete prodavat i vice zbozi? 
+${message_confirm}    xpath=//*[@id="contact-form"]/div[4]/button

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180417 19:08:00.998" generator="Robot 3.0.2 (Python 2.7.9 on win32)">
+<robot generated="20180417 20:00:17.948" generator="Robot 3.0.2 (Python 2.7.9 on win32)">
 <suite source="C:\Users\steak\workspace\czc-testing" id="s1" name="Czc-Testing">
 <suite source="C:\Users\steak\workspace\czc-testing\Tests" id="s1-s1" name="Tests">
-<suite source="C:\Users\steak\workspace\czc-testing\Tests\CZC_BasicFunctions.robot" id="s1-s1-s1" name="CZC BasicFunctions">
-<test id="s1-s1-s1-t1" name="Check mainpage loading">
+<suite source="C:\Users\steak\workspace\czc-testing\Tests\testovaci.robot" id="s1-s1-s1" name="Testovaci">
+<test id="s1-s1-s1-t1" name="Testovaci">
 <kw type="setup" name="Open main page" library="basicKeywords">
 <doc>Open browser and new page</doc>
 <kw name="Open Browser" library="Selenium2Library">
@@ -12,914 +12,101 @@
 <arg>http://www.czc.cz</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20180417 19:08:01.237" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 19:08:08.743" starttime="20180417 19:08:01.236"></status>
+<msg timestamp="20180417 20:00:18.159" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
+<status status="PASS" endtime="20180417 20:00:24.884" starttime="20180417 20:00:18.159"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 19:08:09.939" starttime="20180417 19:08:08.744"></status>
+<status status="PASS" endtime="20180417 20:00:26.035" starttime="20180417 20:00:24.886"></status>
 </kw>
-<status status="PASS" endtime="20180417 19:08:09.940" starttime="20180417 19:08:01.236"></status>
+<status status="PASS" endtime="20180417 20:00:26.038" starttime="20180417 20:00:18.158"></status>
 </kw>
-<kw name="Check all mainpage items" library="basicKeywords">
-<doc>Check if mainpage contains all neccessary elements</doc>
-<kw name="Check strings on page" library="basicKeywords">
-<doc>Check if page contains all strings defined in argument</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>@{mainpage_labels}</arg>
+<arg>${contact_element}</arg>
 </arguments>
-<kw type="for" name="${string} IN [ @{string_set} ]">
-<kw type="foritem" name="${string} = Pobočky">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" endtime="20180417 20:00:26.076" starttime="20180417 20:00:26.039"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${string}</arg>
+<arg>${contact_element}</arg>
 </arguments>
-<status status="PASS" endtime="20180417 19:08:10.061" starttime="20180417 19:08:09.945"></status>
+<msg timestamp="20180417 20:00:26.077" level="INFO">Clicking element 'xpath=//*[@id="footer-links"]/div[1]/div[2]/div[1]/ul/li[1]/a'.</msg>
+<status status="PASS" endtime="20180417 20:00:27.357" starttime="20180417 20:00:26.076"></status>
 </kw>
-<status status="PASS" endtime="20180417 19:08:10.062" starttime="20180417 19:08:09.944"></status>
-</kw>
-<kw type="foritem" name="${string} = Akce">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>${string}</arg>
+<arg>${contact_product_element}</arg>
 </arguments>
-<status status="PASS" endtime="20180417 19:08:10.101" starttime="20180417 19:08:10.063"></status>
+<status status="PASS" endtime="20180417 20:00:27.381" starttime="20180417 20:00:27.357"></status>
 </kw>
-<status status="PASS" endtime="20180417 19:08:10.102" starttime="20180417 19:08:10.062"></status>
-</kw>
-<kw type="foritem" name="${string} = Služby">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${string}</arg>
+<arg>${contact_product_element}</arg>
 </arguments>
-<status status="PASS" endtime="20180417 19:08:10.223" starttime="20180417 19:08:10.103"></status>
+<msg timestamp="20180417 20:00:27.382" level="INFO">Clicking element 'xpath=//*[@id="content"]/div[2]/div[2]/ul/li[3]/a'.</msg>
+<status status="PASS" endtime="20180417 20:00:27.503" starttime="20180417 20:00:27.382"></status>
 </kw>
-<status status="PASS" endtime="20180417 19:08:10.224" starttime="20180417 19:08:10.103"></status>
-</kw>
-<kw type="foritem" name="${string} = Články">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>${string}</arg>
+<arg>${message_element}</arg>
 </arguments>
-<status status="PASS" endtime="20180417 19:08:10.348" starttime="20180417 19:08:10.227"></status>
+<status status="PASS" endtime="20180417 20:00:27.748" starttime="20180417 20:00:27.504"></status>
 </kw>
-<status status="PASS" endtime="20180417 19:08:10.349" starttime="20180417 19:08:10.226"></status>
-</kw>
-<kw type="foritem" name="${string} = přihlášení">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>${string}</arg>
+<arg>${message_element}</arg>
+<arg>${message}</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180417 19:08:15.824" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180417 19:08:15.824" starttime="20180417 19:08:15.399"></status>
+<msg timestamp="20180417 20:00:27.749" level="INFO">Typing text 'Dobry den, budete prodavat i vice zbozi?' into text field 'xpath=//*[@id="frm-message"]'.</msg>
+<status status="PASS" endtime="20180417 20:00:28.007" starttime="20180417 20:00:27.749"></status>
 </kw>
-<msg timestamp="20180417 19:08:15.827" level="FAIL">Text 'přihlášení' did not appear in 5 seconds.</msg>
-<status status="FAIL" endtime="20180417 19:08:15.828" starttime="20180417 19:08:10.350"></status>
-</kw>
-<status status="FAIL" endtime="20180417 19:08:15.828" starttime="20180417 19:08:10.349"></status>
-</kw>
-<status status="FAIL" endtime="20180417 19:08:15.829" starttime="20180417 19:08:09.944"></status>
-</kw>
-<status status="FAIL" endtime="20180417 19:08:15.830" starttime="20180417 19:08:09.942"></status>
-</kw>
-<status status="FAIL" endtime="20180417 19:08:15.831" starttime="20180417 19:08:09.941"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${message_confirm}</arg>
+</arguments>
+<msg timestamp="20180417 20:00:28.008" level="INFO">Clicking element 'xpath=//*[@id="contact-form"]/div[4]/button'.</msg>
+<status status="PASS" endtime="20180417 20:00:28.133" starttime="20180417 20:00:28.007"></status>
 </kw>
 <kw type="teardown" name="Close all browsers" library="basicKeywords">
 <doc>Close browser</doc>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 19:08:18.907" starttime="20180417 19:08:15.833"></status>
+<status status="PASS" endtime="20180417 20:00:31.226" starttime="20180417 20:00:28.135"></status>
 </kw>
-<status status="PASS" endtime="20180417 19:08:18.907" starttime="20180417 19:08:15.831"></status>
+<status status="PASS" endtime="20180417 20:00:31.226" starttime="20180417 20:00:28.134"></status>
 </kw>
-<doc>TC 1</doc>
-<status status="FAIL" endtime="20180417 19:08:18.908" critical="yes" starttime="20180417 19:08:01.235">Text 'přihlášení' did not appear in 5 seconds.</status>
+<status status="PASS" endtime="20180417 20:00:31.226" critical="yes" starttime="20180417 20:00:18.157"></status>
 </test>
-<test id="s1-s1-s1-t2" name="Search product and check results">
-<kw type="setup" name="Open main page" library="basicKeywords">
-<doc>Open browser and new page</doc>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>http://www.czc.cz</arg>
-<arg>chrome</arg>
-</arguments>
-<msg timestamp="20180417 19:08:18.911" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 19:08:26.521" starttime="20180417 19:08:18.910"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 19:08:27.712" starttime="20180417 19:08:26.523"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:27.712" starttime="20180417 19:08:18.909"></status>
-</kw>
-<kw name="Search product" library="basicKeywords">
-<doc>Fill input on mainpage and search</doc>
-<arguments>
-<arg>Apple iPhone 5s</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${search_input}</arg>
-<arg>${item}</arg>
-</arguments>
-<msg timestamp="20180417 19:08:27.716" level="INFO">Typing text 'Apple iPhone 5s' into text field '//input[@id="fulltext"]'.</msg>
-<status status="PASS" endtime="20180417 19:08:29.131" starttime="20180417 19:08:27.714"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${search_button}</arg>
-</arguments>
-<msg timestamp="20180417 19:08:29.133" level="INFO">Clicking element '//input[@id="fulltextSubmit"]'.</msg>
-<status status="PASS" endtime="20180417 19:08:32.684" starttime="20180417 19:08:29.131"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.685" starttime="20180417 19:08:27.713"></status>
-</kw>
-<kw name="Check search result page" library="basicKeywords">
-<doc>Check all elements on result page</doc>
-<kw name="Check strings on page" library="basicKeywords">
-<doc>Check if page contains all strings defined in argument</doc>
-<arguments>
-<arg>@{resultpage_labels}</arg>
-</arguments>
-<kw type="for" name="${string} IN [ @{string_set} ]">
-<kw type="foritem" name="${string} = Cena">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:32.745" starttime="20180417 19:08:32.689"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.746" starttime="20180417 19:08:32.688"></status>
-</kw>
-<kw type="foritem" name="${string} = Dostupnost">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:32.800" starttime="20180417 19:08:32.747"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.801" starttime="20180417 19:08:32.746"></status>
-</kw>
-<kw type="foritem" name="${string} = Stav zboží">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:32.861" starttime="20180417 19:08:32.803"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.862" starttime="20180417 19:08:32.803"></status>
-</kw>
-<kw type="foritem" name="${string} = Štítky">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:32.905" starttime="20180417 19:08:32.863"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.905" starttime="20180417 19:08:32.862"></status>
-</kw>
-<kw type="foritem" name="${string} = Vyhledávání">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:32.947" starttime="20180417 19:08:32.906"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.948" starttime="20180417 19:08:32.906"></status>
-</kw>
-<kw type="foritem" name="${string} = Výrobce">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:32.987" starttime="20180417 19:08:32.949"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.987" starttime="20180417 19:08:32.948"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.987" starttime="20180417 19:08:32.688"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:32.988" starttime="20180417 19:08:32.687"></status>
-</kw>
-<kw name="Check elements on page" library="basicKeywords">
-<doc>Check if page contains all elements defined in argument</doc>
-<arguments>
-<arg>@{resultpage_elements}</arg>
-</arguments>
-<kw type="for" name="${elem} IN [ @{element_set} ]">
-<kw type="foritem" name="${elem} = //button[contains(text(),&quot;Podrobné filtrování&quot;)]">
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${elem}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:33.015" starttime="20180417 19:08:32.991"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:33.016" starttime="20180417 19:08:32.990"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:33.016" starttime="20180417 19:08:32.990"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:33.017" starttime="20180417 19:08:32.989"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:33.018" starttime="20180417 19:08:32.685"></status>
-</kw>
-<kw type="teardown" name="Close all browsers" library="basicKeywords">
-<doc>Close browser</doc>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 19:08:36.126" starttime="20180417 19:08:33.019"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:36.127" starttime="20180417 19:08:33.018"></status>
-</kw>
-<doc>TC 2</doc>
-<status status="PASS" endtime="20180417 19:08:36.128" critical="yes" starttime="20180417 19:08:18.909"></status>
-</test>
-<test id="s1-s1-s1-t3" name="Select category from menu and check results">
-<kw type="setup" name="Open main page" library="basicKeywords">
-<doc>Open browser and new page</doc>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>http://www.czc.cz</arg>
-<arg>chrome</arg>
-</arguments>
-<msg timestamp="20180417 19:08:36.133" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 19:08:44.364" starttime="20180417 19:08:36.132"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 19:08:45.517" starttime="20180417 19:08:44.365"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:45.519" starttime="20180417 19:08:36.131"></status>
-</kw>
-<kw name="Select category wireless mouse from menu" library="basicKeywords">
-<doc>Select category from menu</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${menu_fifth}</arg>
-</arguments>
-<msg timestamp="20180417 19:08:45.520" level="INFO">Clicking element '//div[@class="dep"][5]'.</msg>
-<status status="PASS" endtime="20180417 19:08:46.238" starttime="20180417 19:08:45.520"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>Bezdrátové</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:46.421" starttime="20180417 19:08:46.240"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${wireless_mouse_label}</arg>
-</arguments>
-<msg timestamp="20180417 19:08:46.424" level="INFO">Clicking element '//a[contains(text(),"Bezdrátové")]'.</msg>
-<status status="PASS" endtime="20180417 19:08:48.679" starttime="20180417 19:08:46.422"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>Bezdrátové myši</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:48.753" starttime="20180417 19:08:48.680"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:48.754" starttime="20180417 19:08:45.519"></status>
-</kw>
-<kw name="Check wireless mouse page" library="basicKeywords">
-<doc>Checks all elements on result page</doc>
-<kw name="Check strings on page" library="basicKeywords">
-<doc>Check if page contains all strings defined in argument</doc>
-<arguments>
-<arg>@{categorypage_labels}</arg>
-</arguments>
-<kw type="for" name="${string} IN [ @{string_set} ]">
-<kw type="foritem" name="${string} = Příslušenství">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:48.820" starttime="20180417 19:08:48.758"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:48.821" starttime="20180417 19:08:48.757"></status>
-</kw>
-<kw type="foritem" name="${string} = Myši">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:48.939" starttime="20180417 19:08:48.822"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:48.939" starttime="20180417 19:08:48.821"></status>
-</kw>
-<kw type="foritem" name="${string} = Bezdrátové">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>${string}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:48.979" starttime="20180417 19:08:48.940"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:48.979" starttime="20180417 19:08:48.940"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:48.979" starttime="20180417 19:08:48.757"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:48.980" starttime="20180417 19:08:48.756"></status>
-</kw>
-<kw name="Check elements on page" library="basicKeywords">
-<doc>Check if page contains all elements defined in argument</doc>
-<arguments>
-<arg>@{categorypage_elements}</arg>
-</arguments>
-<kw type="for" name="${elem} IN [ @{element_set} ]">
-<kw type="foritem" name="${elem} = //button[@title=&quot;Přidat zboží do košíku&quot;]">
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${elem}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:08:49.005" starttime="20180417 19:08:48.982"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:49.006" starttime="20180417 19:08:48.982"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:49.006" starttime="20180417 19:08:48.981"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:49.006" starttime="20180417 19:08:48.980"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:49.007" starttime="20180417 19:08:48.755"></status>
-</kw>
-<kw type="teardown" name="Close all browsers" library="basicKeywords">
-<doc>Close browser</doc>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 19:08:52.080" starttime="20180417 19:08:49.008"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:08:52.081" starttime="20180417 19:08:49.007"></status>
-</kw>
-<doc>TC 3</doc>
-<status status="PASS" endtime="20180417 19:08:52.082" critical="yes" starttime="20180417 19:08:36.129"></status>
-</test>
-<test id="s1-s1-s1-t4" name="Product ordering">
-<kw type="setup" name="Open main page" library="basicKeywords">
-<doc>Open browser and new page</doc>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>http://www.czc.cz</arg>
-<arg>chrome</arg>
-</arguments>
-<msg timestamp="20180417 19:08:52.087" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 19:08:59.177" starttime="20180417 19:08:52.086"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 19:09:00.343" starttime="20180417 19:08:59.178"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:00.343" starttime="20180417 19:08:52.085"></status>
-</kw>
-<kw name="Select category wireless mouse from menu" library="basicKeywords">
-<doc>Select category from menu</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${menu_fifth}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:00.348" level="INFO">Clicking element '//div[@class="dep"][5]'.</msg>
-<status status="PASS" endtime="20180417 19:09:01.052" starttime="20180417 19:09:00.345"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>Bezdrátové</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:01.254" starttime="20180417 19:09:01.053"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${wireless_mouse_label}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:01.256" level="INFO">Clicking element '//a[contains(text(),"Bezdrátové")]'.</msg>
-<status status="PASS" endtime="20180417 19:09:03.525" starttime="20180417 19:09:01.255"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>Bezdrátové myši</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:03.579" starttime="20180417 19:09:03.525"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:03.580" starttime="20180417 19:09:00.344"></status>
-</kw>
-<kw name="Order from the cheapest" library="basicKeywords">
-<doc>Click on cheapest ordering</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${order_by_cheapest}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:03.585" level="INFO">Clicking element '//a[contains(text(),"Nejlevnější")]'.</msg>
-<status status="PASS" endtime="20180417 19:09:03.928" starttime="20180417 19:09:03.584"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:03.929" starttime="20180417 19:09:03.583"></status>
-</kw>
-<kw name="Check cheapest ordering" library="basicKeywords">
-<doc>Check if the cheapest ordering category is active</doc>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${cheapest_active}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:05.570" starttime="20180417 19:09:03.933"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:05.570" starttime="20180417 19:09:03.929"></status>
-</kw>
-<kw name="Order from the most expensive" library="basicKeywords">
-<doc>Click on expensive ordering</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${order_by_expensive}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:05.573" level="INFO">Clicking element '//a[contains(text(),"Nejdražší")]'.</msg>
-<status status="PASS" endtime="20180417 19:09:06.114" starttime="20180417 19:09:05.572"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:06.117" starttime="20180417 19:09:05.571"></status>
-</kw>
-<kw name="Check expensive ordering" library="basicKeywords">
-<doc>Check if the expensive ordering category is active</doc>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${expensive_active}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:06.143" starttime="20180417 19:09:06.120"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:06.144" starttime="20180417 19:09:06.118"></status>
-</kw>
-<kw type="teardown" name="Close all browsers" library="basicKeywords">
-<doc>Close browser</doc>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 19:09:09.228" starttime="20180417 19:09:06.145"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:09.229" starttime="20180417 19:09:06.144"></status>
-</kw>
-<doc>TC 4</doc>
-<status status="PASS" endtime="20180417 19:09:09.230" critical="yes" starttime="20180417 19:08:52.083"></status>
-</test>
-<test id="s1-s1-s1-t5" name="Login success">
-<kw type="setup" name="Open main page" library="basicKeywords">
-<doc>Open browser and new page</doc>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>http://www.czc.cz</arg>
-<arg>chrome</arg>
-</arguments>
-<msg timestamp="20180417 19:09:09.236" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 19:09:17.864" starttime="20180417 19:09:09.236"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 19:09:19.045" starttime="20180417 19:09:17.866"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:19.045" starttime="20180417 19:09:09.234"></status>
-</kw>
-<kw name="Login with username and password" library="basicKeywords">
-<doc>Login success</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${login}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:19.049" level="INFO">Clicking element 'id=login'.</msg>
-<status status="PASS" endtime="20180417 19:09:19.378" starttime="20180417 19:09:19.048"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${username_input}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:20.056" starttime="20180417 19:09:19.379"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${username_input}</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:20.057" level="INFO">Typing text 'JanNovak00' into text field 'id=frm-name'.</msg>
-<status status="PASS" endtime="20180417 19:09:20.848" starttime="20180417 19:09:20.057"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${password_input}</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:20.852" level="INFO">Typing text 'Nejakytajnyheslo' into text field 'id=frm-password-popup'.</msg>
-<status status="PASS" endtime="20180417 19:09:21.476" starttime="20180417 19:09:20.849"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${submit}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:21.477" level="INFO">Clicking element 'xpath=//*[contains(@class,"submit")]'.</msg>
-<status status="PASS" endtime="20180417 19:09:21.760" starttime="20180417 19:09:21.476"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${logged}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:23.612" starttime="20180417 19:09:21.761"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:23.613" starttime="20180417 19:09:19.046"></status>
-</kw>
-<kw type="teardown" name="Close all browsers" library="basicKeywords">
-<doc>Close browser</doc>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 19:09:26.682" starttime="20180417 19:09:23.616"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:26.683" starttime="20180417 19:09:23.614"></status>
-</kw>
-<doc>TC 10</doc>
-<status status="PASS" endtime="20180417 19:09:26.683" critical="yes" starttime="20180417 19:09:09.233"></status>
-</test>
-<test id="s1-s1-s1-t6" name="Login failed">
-<kw type="setup" name="Open main page" library="basicKeywords">
-<doc>Open browser and new page</doc>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>http://www.czc.cz</arg>
-<arg>chrome</arg>
-</arguments>
-<msg timestamp="20180417 19:09:26.688" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 19:09:35.515" starttime="20180417 19:09:26.687"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 19:09:36.694" starttime="20180417 19:09:35.516"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:36.695" starttime="20180417 19:09:26.686"></status>
-</kw>
-<kw name="Login with wrong username and password" library="basicKeywords">
-<doc>Login fail</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${login}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:36.697" level="INFO">Clicking element 'id=login'.</msg>
-<status status="PASS" endtime="20180417 19:09:37.491" starttime="20180417 19:09:36.696"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${username_input}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:37.707" starttime="20180417 19:09:37.492"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${username_input}</arg>
-<arg>${username_wrong}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:37.709" level="INFO">Typing text 'spatnejmeno' into text field 'id=frm-name'.</msg>
-<status status="PASS" endtime="20180417 19:09:38.201" starttime="20180417 19:09:37.708"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${password_input}</arg>
-<arg>${password_wrong}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:38.205" level="INFO">Typing text 'spatneheslo' into text field 'id=frm-password-popup'.</msg>
-<status status="PASS" endtime="20180417 19:09:38.714" starttime="20180417 19:09:38.202"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${wrong_login}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:38.759" starttime="20180417 19:09:38.716"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:38.760" starttime="20180417 19:09:36.695"></status>
-</kw>
-<kw type="teardown" name="Close all browsers" library="basicKeywords">
-<doc>Close browser</doc>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 19:09:41.825" starttime="20180417 19:09:38.762"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:41.826" starttime="20180417 19:09:38.761"></status>
-</kw>
-<doc>TC 11</doc>
-<status status="PASS" endtime="20180417 19:09:41.826" critical="yes" starttime="20180417 19:09:26.684"></status>
-</test>
-<test id="s1-s1-s1-t7" name="Login and successful sign out">
-<kw type="setup" name="Open main page" library="basicKeywords">
-<doc>Open browser and new page</doc>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>http://www.czc.cz</arg>
-<arg>chrome</arg>
-</arguments>
-<msg timestamp="20180417 19:09:41.829" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 19:09:49.796" starttime="20180417 19:09:41.828"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 19:09:50.946" starttime="20180417 19:09:49.797"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:50.947" starttime="20180417 19:09:41.827"></status>
-</kw>
-<kw name="Login with username and password" library="basicKeywords">
-<doc>Login success</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${login}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:50.949" level="INFO">Clicking element 'id=login'.</msg>
-<status status="PASS" endtime="20180417 19:09:51.723" starttime="20180417 19:09:50.948"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${username_input}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:52.068" starttime="20180417 19:09:51.724"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${username_input}</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:52.069" level="INFO">Typing text 'JanNovak00' into text field 'id=frm-name'.</msg>
-<status status="PASS" endtime="20180417 19:09:52.369" starttime="20180417 19:09:52.068"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${password_input}</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:52.370" level="INFO">Typing text 'Nejakytajnyheslo' into text field 'id=frm-password-popup'.</msg>
-<status status="PASS" endtime="20180417 19:09:52.965" starttime="20180417 19:09:52.370"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${submit}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:52.967" level="INFO">Clicking element 'xpath=//*[contains(@class,"submit")]'.</msg>
-<status status="PASS" endtime="20180417 19:09:53.130" starttime="20180417 19:09:52.966"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${logged}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:09:54.643" starttime="20180417 19:09:53.132"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:54.644" starttime="20180417 19:09:50.947"></status>
-</kw>
-<kw name="Successful signout" library="basicKeywords">
-<doc>Sign out</doc>
-<kw name="Mouse Over" library="Selenium2Library">
-<doc>Simulates hovering mouse over the element ``locator``.</doc>
-<arguments>
-<arg>${logged}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:54.646" level="INFO">Simulating Mouse Over on element 'id=logged-user'.</msg>
-<status status="PASS" endtime="20180417 19:09:54.700" starttime="20180417 19:09:54.645"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${sign_out}</arg>
-</arguments>
-<msg timestamp="20180417 19:09:54.701" level="INFO">Clicking element 'xpath=//*[contains(@class,"usr-logout")]'.</msg>
-<status status="PASS" endtime="20180417 19:09:54.812" starttime="20180417 19:09:54.700"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:54.812" starttime="20180417 19:09:54.644"></status>
-</kw>
-<kw type="teardown" name="Close all browsers" library="basicKeywords">
-<doc>Close browser</doc>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 19:09:57.860" starttime="20180417 19:09:54.813"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:09:57.861" starttime="20180417 19:09:54.813"></status>
-</kw>
-<doc>TC 15</doc>
-<status status="PASS" endtime="20180417 19:09:57.861" critical="yes" starttime="20180417 19:09:41.827"></status>
-</test>
-<test id="s1-s1-s1-t8" name="Find product and add comment to discussion">
-<kw type="setup" name="Open main page" library="basicKeywords">
-<doc>Open browser and new page</doc>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>http://www.czc.cz</arg>
-<arg>chrome</arg>
-</arguments>
-<msg timestamp="20180417 19:09:57.864" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 19:10:05.187" starttime="20180417 19:09:57.864"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 19:10:06.338" starttime="20180417 19:10:05.188"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:10:06.339" starttime="20180417 19:09:57.863"></status>
-</kw>
-<kw name="Login with username and password" library="basicKeywords">
-<doc>Login success</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${login}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:06.344" level="INFO">Clicking element 'id=login'.</msg>
-<status status="PASS" endtime="20180417 19:10:07.277" starttime="20180417 19:10:06.342"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${username_input}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:10:07.456" starttime="20180417 19:10:07.278"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${username_input}</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:07.458" level="INFO">Typing text 'JanNovak00' into text field 'id=frm-name'.</msg>
-<status status="PASS" endtime="20180417 19:10:07.744" starttime="20180417 19:10:07.457"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${password_input}</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:07.747" level="INFO">Typing text 'Nejakytajnyheslo' into text field 'id=frm-password-popup'.</msg>
-<status status="PASS" endtime="20180417 19:10:08.241" starttime="20180417 19:10:07.746"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${submit}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:08.245" level="INFO">Clicking element 'xpath=//*[contains(@class,"submit")]'.</msg>
-<status status="PASS" endtime="20180417 19:10:08.403" starttime="20180417 19:10:08.243"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${logged}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:10:09.907" starttime="20180417 19:10:08.404"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:10:09.909" starttime="20180417 19:10:06.340"></status>
-</kw>
-<kw name="Search product" library="basicKeywords">
-<doc>Fill input on mainpage and search</doc>
-<arguments>
-<arg>Apple iPhone 6s</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${search_input}</arg>
-<arg>${item}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:09.912" level="INFO">Typing text 'Apple iPhone 6s' into text field '//input[@id="fulltext"]'.</msg>
-<status status="PASS" endtime="20180417 19:10:10.120" starttime="20180417 19:10:09.912"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${search_button}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:10.121" level="INFO">Clicking element '//input[@id="fulltextSubmit"]'.</msg>
-<status status="PASS" endtime="20180417 19:10:13.327" starttime="20180417 19:10:10.120"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:10:13.328" starttime="20180417 19:10:09.910"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${iphone6}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:13.331" level="INFO">Clicking element 'xpath=//*[@id="tiles"]/div[1]/div[1]/div[2]/div[1]/h5/a'.</msg>
-<status status="PASS" endtime="20180417 19:10:16.157" starttime="20180417 19:10:13.329"></status>
-</kw>
-<kw name="Add comment to discussion" library="basicKeywords">
-<doc>Add comment</doc>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${enter_discus}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:16.161" level="INFO">Clicking element 'xpath=//*[@id="latestActiveDiscussionThreadsContainer"]/div/div/div[2]/a[3]'.</msg>
-<status status="PASS" endtime="20180417 19:10:16.652" starttime="20180417 19:10:16.159"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${discus_name_element}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 19:10:16.959" starttime="20180417 19:10:16.653"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${discus_name_element}</arg>
-<arg>${discus_name}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:16.964" level="INFO">Typing text 'Tema01' into text field 'xpath=//*[@id="frm-title"]'.</msg>
-<status status="PASS" endtime="20180417 19:10:17.305" starttime="20180417 19:10:16.961"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${discus_content_element}</arg>
-<arg>${discus_content}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:17.307" level="INFO">Typing text 'Iphone6s' into text field 'xpath=//*[@id="frm-content"]'.</msg>
-<status status="PASS" endtime="20180417 19:10:18.268" starttime="20180417 19:10:17.306"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${discus_confirm}</arg>
-</arguments>
-<msg timestamp="20180417 19:10:18.270" level="INFO">Clicking element 'xpath=//*[@id="popup-new-discussion-thread"]/div/form/div[5]/button[2]'.</msg>
-<status status="PASS" endtime="20180417 19:10:18.492" starttime="20180417 19:10:18.269"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:10:18.493" starttime="20180417 19:10:16.158"></status>
-</kw>
-<kw type="teardown" name="Close all browsers" library="basicKeywords">
-<doc>Close browser</doc>
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 19:10:21.580" starttime="20180417 19:10:18.496"></status>
-</kw>
-<status status="PASS" endtime="20180417 19:10:21.581" starttime="20180417 19:10:18.495"></status>
-</kw>
-<doc>TC 13</doc>
-<status status="PASS" endtime="20180417 19:10:21.581" critical="yes" starttime="20180417 19:09:57.862"></status>
-</test>
-<status status="FAIL" endtime="20180417 19:10:21.583" starttime="20180417 19:08:01.088"></status>
+<status status="PASS" endtime="20180417 20:00:31.229" starttime="20180417 20:00:17.995"></status>
 </suite>
-<status status="FAIL" endtime="20180417 19:10:21.590" starttime="20180417 19:08:01.085"></status>
+<status status="PASS" endtime="20180417 20:00:31.231" starttime="20180417 20:00:17.995"></status>
 </suite>
-<status status="FAIL" endtime="20180417 19:10:21.595" starttime="20180417 19:08:01.061"></status>
+<status status="PASS" endtime="20180417 20:00:31.231" starttime="20180417 20:00:17.979"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="7">Critical Tests</stat>
-<stat fail="1" pass="7">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Czc-Testing" pass="7">Czc-Testing</stat>
-<stat fail="1" id="s1-s1" name="Tests" pass="7">Czc-Testing.Tests</stat>
-<stat fail="1" id="s1-s1-s1" name="CZC BasicFunctions" pass="7">Czc-Testing.Tests.CZC BasicFunctions</stat>
+<stat fail="0" id="s1" name="Czc-Testing" pass="1">Czc-Testing</stat>
+<stat fail="0" id="s1-s1" name="Tests" pass="1">Czc-Testing.Tests</stat>
+<stat fail="0" id="s1-s1-s1" name="Testovaci" pass="1">Czc-Testing.Tests.Testovaci</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20180417 19:08:01.222" level="ERROR">Error in file 'C:\Users\steak\workspace\czc-testing\Resources\variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
-<msg timestamp="20180417 19:08:01.222" level="ERROR">Error in file 'C:\Users\steak\workspace\czc-testing\Resources\variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
-<msg timestamp="20180417 19:08:01.232" level="WARN">Imported resource file 'C:\Users\steak\workspace\czc-testing\Resources\loginKeywords.robot' is empty.</msg>
+<msg timestamp="20180417 20:00:18.144" level="ERROR">Error in file 'C:\Users\steak\workspace\czc-testing\Resources\variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20180417 20:00:18.144" level="ERROR">Error in file 'C:\Users\steak\workspace\czc-testing\Resources\variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20180417 20:00:18.155" level="WARN">Imported resource file 'C:\Users\steak\workspace\czc-testing\Resources\loginKeywords.robot' is empty.</msg>
 </errors>
 </robot>
