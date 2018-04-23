@@ -56,6 +56,7 @@ Add product to the cart as a logged user
     Click element    ${iphone6}
     Add to cart
     Check cart
+    Set number of products
 
 Login success
     [Documentation]    TC 10
