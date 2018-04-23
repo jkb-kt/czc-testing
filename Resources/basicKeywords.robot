@@ -6,7 +6,7 @@ Library  Selenium2Library
 Open main page
     [Documentation]  Open browser and new page
     Open browser  http://www.czc.cz  chrome
-    maximize browser window
+
 
 Close all browsers
     [Documentation]  Close browser
