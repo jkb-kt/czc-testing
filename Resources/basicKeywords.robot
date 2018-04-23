@@ -180,3 +180,30 @@ Set number of products
     Input text    ${quantity_input}    ${quantity_number_del}
     Press key     ${quantity_input}   \\13
     
+Check all mainpage categories
+
+    [Documentation]    Check if mainpage contains categories
+    Check strings on page    @{category_set}
+    
+Open product
+    
+    [Documentation]    Open product
+    Search product    ${product_name}
+    Click element    ${product_link}
+    
+Check product sections
+    
+    [Documentation]    Check if product page contains sections
+    Open product
+    Wait Until Page Contains Element    ${product_heading}
+    Check elements on page    @{product_sections}
+
+Rate product
+    
+    [Documentation]    Rate product using stars
+    Open product
+    Wait Until Page Contains Element    ${product_rating}    
+    Click element    ${product_rating}
+    Wait Until Page Contains Element    ${product_stars}
+    Click Element At Coordinates    ${product_stars}    145    10
+    Click element    ${product_save_rating}
