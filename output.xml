@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180417 20:00:17.948" generator="Robot 3.0.2 (Python 2.7.9 on win32)">
+<robot generated="20180423 19:12:55.660" generator="Robot 3.0.2 (Python 2.7.9 on win32)">
 <suite source="C:\Users\steak\workspace\czc-testing" id="s1" name="Czc-Testing">
 <suite source="C:\Users\steak\workspace\czc-testing\Tests" id="s1-s1" name="Tests">
-<suite source="C:\Users\steak\workspace\czc-testing\Tests\testovaci.robot" id="s1-s1-s1" name="Testovaci">
-<test id="s1-s1-s1-t1" name="Testovaci">
+<suite source="C:\Users\steak\workspace\czc-testing\Tests\test.robot" id="s1-s1-s1" name="Test">
+<test id="s1-s1-s1-t1" name="Find last comment">
 <kw type="setup" name="Open main page" library="basicKeywords">
 <doc>Open browser and new page</doc>
 <kw name="Open Browser" library="Selenium2Library">
@@ -12,84 +12,145 @@
 <arg>http://www.czc.cz</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20180417 20:00:18.159" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
-<status status="PASS" endtime="20180417 20:00:24.884" starttime="20180417 20:00:18.159"></status>
+<msg timestamp="20180423 19:12:56.565" level="INFO">Opening browser 'chrome' to base url 'http://www.czc.cz'.</msg>
+<status status="PASS" endtime="20180423 19:13:06.879" starttime="20180423 19:12:56.564"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180417 20:00:26.035" starttime="20180417 20:00:24.886"></status>
+<status status="PASS" endtime="20180423 19:13:08.045" starttime="20180423 19:13:06.880"></status>
 </kw>
-<status status="PASS" endtime="20180417 20:00:26.038" starttime="20180417 20:00:18.158"></status>
+<status status="PASS" endtime="20180423 19:13:08.045" starttime="20180423 19:12:56.563"></status>
 </kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${contact_element}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 20:00:26.076" starttime="20180417 20:00:26.039"></status>
-</kw>
+<kw name="Login with username and password" library="basicKeywords">
+<doc>Login success</doc>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${contact_element}</arg>
+<arg>${login}</arg>
 </arguments>
-<msg timestamp="20180417 20:00:26.077" level="INFO">Clicking element 'xpath=//*[@id="footer-links"]/div[1]/div[2]/div[1]/ul/li[1]/a'.</msg>
-<status status="PASS" endtime="20180417 20:00:27.357" starttime="20180417 20:00:26.076"></status>
+<msg timestamp="20180423 19:13:08.052" level="INFO">Clicking element 'id=login'.</msg>
+<status status="PASS" endtime="20180423 19:13:08.268" starttime="20180423 19:13:08.050"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>${contact_product_element}</arg>
+<arg>${username_input}</arg>
 </arguments>
-<status status="PASS" endtime="20180417 20:00:27.381" starttime="20180417 20:00:27.357"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${contact_product_element}</arg>
-</arguments>
-<msg timestamp="20180417 20:00:27.382" level="INFO">Clicking element 'xpath=//*[@id="content"]/div[2]/div[2]/ul/li[3]/a'.</msg>
-<status status="PASS" endtime="20180417 20:00:27.503" starttime="20180417 20:00:27.382"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${message_element}</arg>
-</arguments>
-<status status="PASS" endtime="20180417 20:00:27.748" starttime="20180417 20:00:27.504"></status>
+<status status="PASS" endtime="20180423 19:13:08.549" starttime="20180423 19:13:08.269"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>${message_element}</arg>
-<arg>${message}</arg>
+<arg>${username_input}</arg>
+<arg>${username}</arg>
 </arguments>
-<msg timestamp="20180417 20:00:27.749" level="INFO">Typing text 'Dobry den, budete prodavat i vice zbozi?' into text field 'xpath=//*[@id="frm-message"]'.</msg>
-<status status="PASS" endtime="20180417 20:00:28.007" starttime="20180417 20:00:27.749"></status>
+<msg timestamp="20180423 19:13:08.551" level="INFO">Typing text 'JanNovak00' into text field 'id=frm-name'.</msg>
+<status status="PASS" endtime="20180423 19:13:09.542" starttime="20180423 19:13:08.550"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180423 19:13:09.544" level="INFO">Typing text 'Nejakytajnyheslo' into text field 'id=frm-password-popup'.</msg>
+<status status="PASS" endtime="20180423 19:13:09.938" starttime="20180423 19:13:09.543"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${message_confirm}</arg>
+<arg>${submit}</arg>
 </arguments>
-<msg timestamp="20180417 20:00:28.008" level="INFO">Clicking element 'xpath=//*[@id="contact-form"]/div[4]/button'.</msg>
-<status status="PASS" endtime="20180417 20:00:28.133" starttime="20180417 20:00:28.007"></status>
+<msg timestamp="20180423 19:13:09.942" level="INFO">Clicking element 'xpath=//*[contains(@class,"submit")]'.</msg>
+<status status="PASS" endtime="20180423 19:13:10.104" starttime="20180423 19:13:09.939"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${logged}</arg>
+</arguments>
+<status status="PASS" endtime="20180423 19:13:11.747" starttime="20180423 19:13:10.105"></status>
+</kw>
+<status status="PASS" endtime="20180423 19:13:11.748" starttime="20180423 19:13:08.047"></status>
+</kw>
+<kw name="Search product" library="basicKeywords">
+<doc>Fill input on mainpage and search</doc>
+<arguments>
+<arg>Apple iPhone 6s</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_input}</arg>
+<arg>${item}</arg>
+</arguments>
+<msg timestamp="20180423 19:13:11.751" level="INFO">Typing text 'Apple iPhone 6s' into text field '//input[@id="fulltext"]'.</msg>
+<status status="PASS" endtime="20180423 19:13:11.902" starttime="20180423 19:13:11.751"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20180423 19:13:11.903" level="INFO">Clicking element '//input[@id="fulltextSubmit"]'.</msg>
+<status status="PASS" endtime="20180423 19:13:13.336" starttime="20180423 19:13:11.903"></status>
+</kw>
+<status status="PASS" endtime="20180423 19:13:13.337" starttime="20180423 19:13:11.749"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${iphone6}</arg>
+</arguments>
+<msg timestamp="20180423 19:13:13.338" level="INFO">Clicking element 'xpath=//*[@id="tiles"]/div[1]/div[1]/div[2]/div[1]/h5/a'.</msg>
+<status status="PASS" endtime="20180423 19:13:15.330" starttime="20180423 19:13:13.338"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${discussion}</arg>
+</arguments>
+<status status="PASS" endtime="20180423 19:13:15.358" starttime="20180423 19:13:15.331"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${discussion}</arg>
+</arguments>
+<msg timestamp="20180423 19:13:15.360" level="INFO">Clicking element 'xpath=//*[@id="pd-discussion-content"]/h2/a'.</msg>
+<status status="PASS" endtime="20180423 19:13:16.348" starttime="20180423 19:13:15.359"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${discussion_order}</arg>
+</arguments>
+<status status="PASS" endtime="20180423 19:13:16.374" starttime="20180423 19:13:16.349"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${discussion_order}</arg>
+</arguments>
+<msg timestamp="20180423 19:13:16.375" level="INFO">Clicking element 'xpath=//*[@id="content"]/div[1]/div[1]/div/span/span[1]'.</msg>
+<status status="PASS" endtime="20180423 19:13:16.442" starttime="20180423 19:13:16.375"></status>
 </kw>
 <kw type="teardown" name="Close all browsers" library="basicKeywords">
 <doc>Close browser</doc>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180417 20:00:31.226" starttime="20180417 20:00:28.135"></status>
+<status status="PASS" endtime="20180423 19:13:19.504" starttime="20180423 19:13:16.443"></status>
 </kw>
-<status status="PASS" endtime="20180417 20:00:31.226" starttime="20180417 20:00:28.134"></status>
+<status status="PASS" endtime="20180423 19:13:19.505" starttime="20180423 19:13:16.443"></status>
 </kw>
-<status status="PASS" endtime="20180417 20:00:31.226" critical="yes" starttime="20180417 20:00:18.157"></status>
+<doc>TC 17</doc>
+<status status="PASS" endtime="20180423 19:13:19.505" critical="yes" starttime="20180423 19:12:56.561"></status>
 </test>
-<status status="PASS" endtime="20180417 20:00:31.229" starttime="20180417 20:00:17.995"></status>
+<status status="PASS" endtime="20180423 19:13:19.506" starttime="20180423 19:12:56.011"></status>
 </suite>
-<status status="PASS" endtime="20180417 20:00:31.231" starttime="20180417 20:00:17.995"></status>
+<status status="PASS" endtime="20180423 19:13:19.508" starttime="20180423 19:12:56.007"></status>
 </suite>
-<status status="PASS" endtime="20180417 20:00:31.231" starttime="20180417 20:00:17.979"></status>
+<status status="PASS" endtime="20180423 19:13:19.510" starttime="20180423 19:12:55.984"></status>
 </suite>
 <statistics>
 <total>
@@ -101,12 +162,12 @@
 <suite>
 <stat fail="0" id="s1" name="Czc-Testing" pass="1">Czc-Testing</stat>
 <stat fail="0" id="s1-s1" name="Tests" pass="1">Czc-Testing.Tests</stat>
-<stat fail="0" id="s1-s1-s1" name="Testovaci" pass="1">Czc-Testing.Tests.Testovaci</stat>
+<stat fail="0" id="s1-s1-s1" name="Test" pass="1">Czc-Testing.Tests.Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20180417 20:00:18.144" level="ERROR">Error in file 'C:\Users\steak\workspace\czc-testing\Resources\variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
-<msg timestamp="20180417 20:00:18.144" level="ERROR">Error in file 'C:\Users\steak\workspace\czc-testing\Resources\variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
-<msg timestamp="20180417 20:00:18.155" level="WARN">Imported resource file 'C:\Users\steak\workspace\czc-testing\Resources\loginKeywords.robot' is empty.</msg>
+<msg timestamp="20180423 19:12:56.547" level="ERROR">Error in file 'C:\Users\steak\workspace\czc-testing\Resources\variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20180423 19:12:56.547" level="ERROR">Error in file 'C:\Users\steak\workspace\czc-testing\Resources\variables.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20180423 19:12:56.558" level="WARN">Imported resource file 'C:\Users\steak\workspace\czc-testing\Resources\loginKeywords.robot' is empty.</msg>
 </errors>
 </robot>

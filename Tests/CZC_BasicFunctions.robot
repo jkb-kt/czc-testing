@@ -73,6 +73,13 @@ Add product question
     [Documentation]    TC 16
     Login with username and password
     Add contact form
+    
+Find last comment
+    [Documentation]    TC 17
+    Login with username and password
+    Search product  Apple iPhone 6s
+    Click element    ${iphone6}
+    
 
 
 

@@ -133,3 +133,12 @@ Add contact form
     wait until page contains element    ${message_element} 
     Input text    ${message_element} ${message}
     Click element    ${message_confirm} 
+    
+Find last comment
+    [Documentation]    Find last comment in discussion
+    
+    wait until page contains element    ${discussion}
+    click element    ${discussion}
+    wait until page contains element    ${discussion_order}
+    click element    ${discussion_order}
+    

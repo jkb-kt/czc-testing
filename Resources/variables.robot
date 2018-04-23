@@ -22,6 +22,8 @@ ${login}    id=login
 ${username_input}    id=frm-name
 ${password_input}    id=frm-password-popup
 ${submit}    xpath=//*[contains(@class,"submit")]
+${discussion}    xpath=//*[@id="pd-discussion-content"]/h2/a
+${discussion_order}    xpath=//*[@id="content"]/div[1]/div[1]/div/span/span[1]
 ${logged}    id=logged-user
 ${username_wrong}    spatnejmeno
 ${password_wrong}    spatneheslo
