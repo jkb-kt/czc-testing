@@ -177,6 +177,6 @@ Set number of products
     [Documentation]    Set number of products
 
     Press key     ${quantity_input}   \\8
-    Input text    ${quantity_input}    ${quantity_number}
+    Input text    ${quantity_input}    ${quantity_number_del}
     Press key     ${quantity_input}   \\13
     
