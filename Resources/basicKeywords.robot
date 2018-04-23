@@ -141,4 +141,35 @@ Find last comment
     click element    ${discussion}
     wait until page contains element    ${discussion_order}
     click element    ${discussion_order}
+  
+Add to cart
+    [Documentation]    Add to cart
+    
+    Wait until page contains element    ${cart_element}
+    Click element    ${cart_element}
+    
+    
+Check cart 
+    [Documentation]    Check cart
+    
+    Wait until page contains element    ${to_cart_element}
+    Click element    ${to_cart_element}
+    check strings on page  @{cart_strings}
+
+Add to favourite
+    [Documentation]    Add to favourite
+    
+    Wait until page contains element    ${favourite_element}
+    Click element    ${favourite_element}
+
+Check favourite  
+    [Documentation]    Check favourite
+
+    Click element    ${check_favourite}
+    check strings on page  @{favourite_strings}
+    
+Clear favourite    
+    [Documentation]    Clear favourite
+
+    Click element    @{delete_favourite}  
     
