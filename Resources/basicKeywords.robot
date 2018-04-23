@@ -147,6 +147,25 @@ Add to cart
     
     Wait until page contains element    ${cart_element}
     Click element    ${cart_element}
+
+Delete from cart
+
+    [Documentation]    Delete item from cart
+
+    click element  ${deleteItem}
+
+
+Add item count
+
+    [Documentation]    Increase count of product
+
+    click element  ${addItemCnt}
+
+
+Back to mainpage
+    [Documentation]  Go to mainpage
+
+    click element  ${logo}
     
     
 Check cart 
@@ -197,6 +216,14 @@ Check product sections
     Open product
     Wait Until Page Contains Element    ${product_heading}
     Check elements on page    @{product_sections}
+
+Click and check book at store
+
+    [Documentation]  Check if the button "Book at store" is ok
+
+    click element  ${bookStore}
+    Check strings on page  @{booking_form}
+
 
 Rate product
     

@@ -1,7 +1,7 @@
 *** Variables ***
 ${search_input}  //input[@id="fulltext"]
 ${search_button}  //input[@id="fulltextSubmit"]
-@{mainpage_labels}  Pobočky  Akce  Služby  Články  přihlášení
+@{mainpage_labels}  Pobočky  Akce  Služby  Články  Přihlášení
 @{mainpage_elements}  //input[@id="fulltext"]  //input[@id="fulltextSubmit"]  //a[@id="logo"]  //div[@id="main-menu"]
                     ...  //div[@id="main-banners-homepage-box"]
 @{resultpage_labels}  Cena  Dostupnost  Stav zboží  Štítky  Vyhledávání  Výrobce
@@ -44,7 +44,7 @@ ${message_confirm}    xpath=//*[@id="contact-form"]/div[4]/button
 ${cart_element}    xpath=//*[@id="product-price-and-delivery-section"]/div[1]/button/span[1]
 ${favourite_element}    xpath=//*[@id="pd-controls-favorite"]/a/i
 ${to_cart_element}    xpath=//*[@id="popup-buy-mode"]/div/div[3]/a
-@{cart_strings}    198386
+@{cart_strings}    Váš nákupní košík
 ${check_favourite}    id=favorite-info
 @{favourite_strings}    Apple iPhone 6s 32GB
 @{delete_favourite}    xpath=//*[@id="upl-products"]/div[1]/div/div[5]/div[2]/a
@@ -60,3 +60,8 @@ ${product_heading}    //*[@id="product-detail"]/div[2]/h1
 @{product_sections}    //*[@class="pd-image"]  //*[@class="pd-description"]  //*[@class="pd-parameter"]
                     ...  //*[@class="pd-review"]  //*[@class="pd-info"]  //*[@class="price-vatin"]
                 ...  //*[@class="rating__control"]  //*[@class="btn btn-buy"]
+${bookStore}   //a[contains(text(),"Rezervovat na prodejně")]
+@{booking_form}  Vyberte pobočku  Jméno  Příjmení  Telefon  E-mail
+${logo}         //a[@id="logo"]
+${deleteItem}   //a[@title="Odstranit z košíku"]
+${addItemCnt}   //a[@class="up"]

@@ -3,7 +3,6 @@
 Library  Selenium2Library
 Resource  ../Resources/variables.robot
 Resource  ../Resources/basicKeywords.robot
-Resource  ../Resources/loginKeywords.robot
 
 Test Setup  Open main page
 Test Teardown  Close all browsers
@@ -65,6 +64,31 @@ Add product to the cart as a logged user
     Add to cart
     Check cart
     Set number of products
+
+Add more products to the cart, edit and delete
+    [Documentation]    TC 8
+
+    Search product  Apple iPhone 6s
+    Click element    ${iphone6}
+    Add to cart
+    Back to mainpage
+
+    Check all mainpage items
+
+    Open product
+    Add to cart
+    Check cart
+
+    Add item count
+    Delete from cart
+
+
+Book at store
+    [Documentation]    TC 9
+
+    Open product
+    Click and check book at store
+
 
 Login success
     [Documentation]    TC 10
