@@ -41,3 +41,10 @@ ${contact_product_element}    xpath=//*[@id="content"]/div[2]/div[2]/ul/li[3]/a
 ${message_element}    xpath=//*[@id="frm-message"]
 ${message}    Dobry den, budete prodavat i vice zbozi? 
 ${message_confirm}    xpath=//*[@id="contact-form"]/div[4]/button
+${cart_element}    xpath=//*[@id="product-price-and-delivery-section"]/div[1]/button/span[1]
+${favourite_element}    xpath=//*[@id="pd-controls-favorite"]/a/i
+${to_cart_element}    xpath=//*[@id="popup-buy-mode"]/div/div[3]/a
+@{cart_strings}    198386
+${check_favourite}    id=favorite-info
+@{favourite_strings}    Apple iPhone 6s 32GB
+@{delete_favourite}    xpath=//*[@id="upl-products"]/div[1]/div/div[5]/div[2]/a
