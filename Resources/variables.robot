@@ -48,3 +48,6 @@ ${to_cart_element}    xpath=//*[@id="popup-buy-mode"]/div/div[3]/a
 ${check_favourite}    id=favorite-info
 @{favourite_strings}    Apple iPhone 6s 32GB
 @{delete_favourite}    xpath=//*[@id="upl-products"]/div[1]/div/div[5]/div[2]/a
+${quantity_input}     //*[@id="frm-quantity"]
+${quantity_number}     0
+
