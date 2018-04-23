@@ -173,3 +173,10 @@ Clear favourite
 
     Click element    @{delete_favourite}  
     
+Set number of products 
+    [Documentation]    Set number of products
+
+    Press key     ${quantity_input}   \\8
+    Input text    ${quantity_input}    ${quantity_number}
+    Press key     ${quantity_input}   \\13
+    
