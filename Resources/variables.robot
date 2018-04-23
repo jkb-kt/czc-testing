@@ -50,4 +50,13 @@ ${check_favourite}    id=favorite-info
 @{delete_favourite}    xpath=//*[@id="upl-products"]/div[1]/div/div[5]/div[2]/a
 ${quantity_input}     //*[@id="frm-quantity"]
 ${quantity_number_del}     0
-
+@{category_set}  Mobily  PC  Komponenty  Televize  Příslušenství  Herní  Foto  SMART
+${product_name}    ASUS ZenFone 3 ZE520KL-1A010WW, černá
+${product_link}    //*[@class="tile-title"]/h5/a
+${product_rating}    //*[@id="pd-review"]/div[@class="links"]/a[@class="btn right"]
+${product_stars}    //*[@class="rating__control"]
+${product_save_rating}    //*[@id="new-review-form"]/div[8]/button
+${product_heading}    //*[@id="product-detail"]/div[2]/h1
+@{product_sections}    //*[@class="pd-image"]  //*[@class="pd-description"]  //*[@class="pd-parameter"]
+                    ...  //*[@class="pd-review"]  //*[@class="pd-info"]  //*[@class="price-vatin"]
+                ...  //*[@class="rating__control"]  //*[@class="btn btn-buy"]
