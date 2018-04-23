@@ -42,6 +42,20 @@ Product ordering
     
 
 
+Add product to the cart
+    [Documentation]    TC 7_a
+    Search product  Apple iPhone 6s
+    Click element    ${iphone6}
+    Add to cart
+    Check cart
+    
+Add product to the cart as a logged user
+    [Documentation]    TC 7_b    
+    Login with username and password
+    Search product  Apple iPhone 6s
+    Click element    ${iphone6}
+    Add to cart
+    Check cart
 
 Login success
     [Documentation]    TC 10
@@ -68,7 +82,16 @@ Find product and add comment to discussion
     Search product  Apple iPhone 6s
     Click element    ${iphone6}
     Add comment to discussion
-     
+
+Mark product as a favourite
+    [Documentation]    TC 14  
+    Login with username and password
+    Search product  Apple iPhone 6s
+    Click element    ${iphone6}
+    Add to favourite
+    Check favourite  
+    Clear favourite
+
 Add product question
     [Documentation]    TC 16
     Login with username and password
