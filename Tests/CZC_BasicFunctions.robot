@@ -71,11 +71,6 @@ Login failed
     
 
 
-Login and successful sign out
-    [Documentation]    TC 15
-    
-    Login with username and password
-    Successful signout
 
 Find product and add comment to discussion
     [Documentation]    TC 13
@@ -92,6 +87,12 @@ Mark product as a favourite
     Add to favourite
     Check favourite  
     Clear favourite
+    
+Login and successful sign out
+    [Documentation]    TC 15
+    
+    Login with username and password
+    Successful signout
 
 Add product question
     [Documentation]    TC 16
