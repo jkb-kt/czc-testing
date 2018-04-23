@@ -30,17 +30,25 @@ Select category from menu and check results
     Select category wireless mouse from menu
     Check wireless mouse page
 
+Check categories on main page
+    
+    [Documentation]  TC 4    
+    Check all mainpage categories
+
 Product ordering
 
-    [Documentation]  TC 4
+    [Documentation]  TC 5
 
     Select category wireless mouse from menu
     Order from the cheapest
     Check cheapest ordering
     Order from the most expensive
     check expensive ordering
-    
 
+Check product page
+    
+    [Documentation]  TC 6    
+    Check product sections    
 
 Add product to the cart
     [Documentation]    TC 7_a
@@ -69,7 +77,11 @@ Login failed
     
     Login with wrong username and password
     
-
+Product rating
+    [Documentation]    TC 12
+    
+    Login with username and password
+    Rate product
 
 
 Find product and add comment to discussion
