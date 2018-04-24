@@ -131,7 +131,7 @@ Add contact form
     wait until page contains element    ${contact_product_element} 
     click element    ${contact_product_element} 
     wait until page contains element    ${message_element} 
-    Input text    ${message_element} ${message}
+    Input text    ${message_element}  ${message}
     Click element    ${message_confirm} 
     
 Find last comment

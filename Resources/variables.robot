@@ -60,7 +60,7 @@ ${product_heading}    //*[@id="product-detail"]/div[2]/h1
 @{product_sections}    //*[@class="pd-image"]  //*[@class="pd-description"]  //*[@class="pd-parameter"]
                     ...  //*[@class="pd-review"]  //*[@class="pd-info"]  //*[@class="price-vatin"]
                 ...  //*[@class="rating__control"]  //*[@class="btn btn-buy"]
-${bookStore}   //a[contains(text(),"Rezervovat na prodejně")]
+${bookStore}   //a[contains(text(),"Rezervovat na")]
 @{booking_form}  Vyberte pobočku  Jméno  Příjmení  Telefon  E-mail
 ${logo}         //a[@id="logo"]
 ${deleteItem}   //a[@title="Odstranit z košíku"]
