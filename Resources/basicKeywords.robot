@@ -165,7 +165,9 @@ Add item count
 Back to mainpage
     [Documentation]  Go to mainpage
 
-    click element  ${logo}
+    #click element  ${logo}
+
+    go to  http://www.czc.cz
     
     
 Check cart 
