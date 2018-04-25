@@ -93,7 +93,7 @@ Login with username and password
     input text    ${username_input}    ${username}
     input text    ${password_input}    ${password}
     click element    ${submit}
-    wait until page contains element    ${logged}
+    wait until page contains element    ${logged}  timeout=15s
     
 Login with wrong username and password
     
@@ -181,7 +181,7 @@ Add to favourite
     [Documentation]    Add to favourite
     
     Wait until page contains element    ${favourite_element}
-    Click element    ${favourite_element}
+    wait until keyword succeeds  10  1s  Click element    ${favourite_element}
 
 Check favourite  
     [Documentation]    Check favourite
@@ -192,7 +192,7 @@ Check favourite
 Clear favourite    
     [Documentation]    Clear favourite
 
-    Click element    @{delete_favourite}  
+    wait until keyword succeeds  10  1s  Click element    @{delete_favourite}
     
 Set number of products 
     [Documentation]    Set number of products
@@ -223,7 +223,7 @@ Click and check book at store
 
     [Documentation]  Check if the button "Book at store" is ok
 
-    click element  ${bookStore}
+    wait until keyword succeeds  10  1s  click element  ${bookStore}
     Check strings on page  @{booking_form}
 
 
