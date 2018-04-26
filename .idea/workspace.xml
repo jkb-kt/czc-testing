@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d9b9715c-e469-4d34-a1c3-4cf135f29c25" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/basicKeywords.robot" afterPath="$PROJECT_DIR$/Resources/basicKeywords.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/CZC_BasicFunctions.robot" afterPath="$PROJECT_DIR$/Tests/CZC_BasicFunctions.robot" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="CZC_BasicFunctions.robot" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CZC_BasicFunctions.robot" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/CZC_BasicFunctions.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="122" column="14" lean-forward="true" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
+            <state relative-caret-position="400">
+              <caret line="89" column="31" lean-forward="false" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
               <folding>
                 <element signature="e#0#187#0" expanded="true" />
               </folding>
@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basicKeywords.robot" pinned="false" current-in-tab="true">
+      <file leaf-file-name="basicKeywords.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/basicKeywords.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="95" column="61" lean-forward="false" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
+            <state relative-caret-position="191">
+              <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -42,8 +42,8 @@
       <file leaf-file-name="variables.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/variables.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="1075">
+              <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -59,9 +59,9 @@
       <list>
         <option value="$PROJECT_DIR$/CZC_automation.robot" />
         <option value="$PROJECT_DIR$/Tests/CZC_LoginFunctions.robot" />
-        <option value="$PROJECT_DIR$/Tests/CZC_BasicFunctions.robot" />
         <option value="$PROJECT_DIR$/Resources/variables.robot" />
         <option value="$PROJECT_DIR$/Resources/basicKeywords.robot" />
+        <option value="$PROJECT_DIR$/Tests/CZC_BasicFunctions.robot" />
       </list>
     </option>
   </component>
@@ -257,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524548857845</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="edit">
+      <created>1524694944064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1524694944064</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -289,9 +296,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add cases 9,10" />
     <MESSAGE value="delete maximize" />
-    <MESSAGE value="edit" />
     <MESSAGE value="edit location" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit location" />
+    <MESSAGE value="edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -462,30 +469,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/CZC_LoginFunctions.robot" />
+    <entry file="file://$PROJECT_DIR$/Resources/basicKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/variables.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="1075">
+          <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/CZC_BasicFunctions.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="122" column="14" lean-forward="true" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
+        <state relative-caret-position="400">
+          <caret line="89" column="31" lean-forward="false" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
           <folding>
             <element signature="e#0#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/basicKeywords.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="95" column="61" lean-forward="false" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -86,7 +86,8 @@ Add more products to the cart, edit and delete
 Book at store
     [Documentation]    TC 9
 
-    Open product
+    Search product  Apple iPhone 6s
+    Click element    ${iphone6}
     Click and check book at store
 
 
