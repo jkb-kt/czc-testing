@@ -125,8 +125,7 @@ Add comment to discussion
 Add contact form
     
     [Documentation]    Add contact form
-    
-    wait until page contains element    ${contact_element}
+    wait until page contains     Kontakty
     click element    ${contact_element}
     wait until page contains element    ${contact_product_element} 
     click element    ${contact_product_element} 
