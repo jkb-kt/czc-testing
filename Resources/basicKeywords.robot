@@ -152,7 +152,7 @@ Delete from cart
 
     [Documentation]    Delete item from cart
 
-    click element  ${deleteItem}
+    wait until keyword succeeds  10  1s  click element  ${deleteItem}
 
 
 Add item count
